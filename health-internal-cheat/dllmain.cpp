@@ -18,17 +18,17 @@ void runCheat() {
    // [in, optional] LPCSTR lpModuleName
    //     );
     DWORD exeBaseAddress = (DWORD)GetModuleHandle(L"gta_sa_compact.exe");
-    //int arr[9] = { 0x0076F3B8, 0x1CC , 0xB4, 0x8, 0x4, 0x0, 0xB0, 0x4, 0x0 };
-    //DWORD obj = exeBaseAddress;
-    //printf("obj + offset = address (value)\n");
-    //for (int i = 0; i < 9; i++) {
-    //    printf("%#.8x + %#.8x = %#.8x ", obj, arr[i], obj + arr[i]);
-    //    DWORD value = *(DWORD*)(obj + arr[i]);//derfrencing
-    //    printf("(%#.8x)\n", value);
-    //    obj = value;
-    //}
-    //float health = *(float*)(obj+0x540);
-    //printf("the health %f\n", health);
+   int arr[9] = { 0x0076F3B8, 0x1CC , 0xB4, 0x8, 0x4, 0x0, 0xB0, 0x4, 0x0 };
+   DWORD obj = exeBaseAddress;
+   printf("obj + offset = address (value)\n");
+   for (int i = 0; i < 9; i++) {
+       printf("%#.8x + %#.8x = %#.8x ", obj, arr[i], obj + arr[i]);
+       DWORD value = *(DWORD*)(obj + arr[i]);//derfrencing
+       printf("(%#.8x)\n", value);
+       obj = value;
+   }
+   float health = *(float*)(obj+0x540);
+   printf("the health %f\n", health);
 
 
     DWORD obj1 = *(DWORD*)(exeBaseAddress + 0x0076F3B8);
