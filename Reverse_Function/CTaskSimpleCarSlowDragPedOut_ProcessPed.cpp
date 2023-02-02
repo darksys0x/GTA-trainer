@@ -139,14 +139,20 @@
 
  //The reverse Function:
 
- struct darksys0x1{
+struct manar{
+	char padding[0x20];
+	float manar_20;
+
+}
+
+struct darksys0x1{
 	char padding[0x0DE];
 	char darksys0x1_DE;
 }
 
 struct darksys0x
-{
-	char padding[0x384];
+{	int darksys0x_0;
+	char padding[0x380];
 	darksys0x1* darksys0x_384;
 	char paddin2[0xd8];
 	int filed_460;
@@ -159,11 +165,13 @@ struct darksys0x
 class Hamad {
 	char* padding[2];
 	bool Hamad_8;
-	int element_c;
+	manar* element_c;
 	darksys0x* Hamad_10;
 	int Hamad_14;
 
-	fun1(char* arg1);
+
+	void fun1(int arg1);
+	void sub_648100(int* arg01, int* arg02);
 }
 
 void Hamad::fun1(int arg1){
@@ -191,20 +199,72 @@ void Hamad::fun1(int arg1){
 		if(cr7 != 0){
 			int dan = this->Hamad_14;
 			if(dan != 0xA){ 
+				//loc_64E0D2
 				sub_64F1E0(cr7, dan); //eax = dan =offcite  || ecx = cr7 basAdrr
-				cr7->arr_464[dan]
+				charcr7->arr_464[dan]
 
 
 			} else {
+				// .text:0064E0CA
+				int dan_2 = cr7->filed_460; //dan2 = edi
+				// loc_64E0E6 || jmp     short loc_64E0E6
+				if(dan_2 == 0){
+					//loc_64E141
+					int var1 =2; 
+					sub_648100(&var1, &arg1);
+					manar* happy = element_c;// mov     eax, [esi+0Ch]
+					float aa = happy->manar_20;	// fld     dword ptr [eax+20h]
+					darksys0x* bb = this->Hamad_10;//push last arrg;
+					int dd = arg1;
+					int kk = bb->darksys0x_0; 
 
-				int dan_2 = cr7->filed_460;
+
+
+
+
+
+
+
+
+				}
+
+
 			}
 
-		}else \\loc_64E142
+		} else {
+ 			// loc_64E142
+		}
+
+
 
 
 
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+}
 
 
 
