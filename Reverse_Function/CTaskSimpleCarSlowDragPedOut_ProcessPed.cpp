@@ -139,9 +139,9 @@
 
  //The reverse Function:
 
-struct manar{
+struct noo{
 	char padding[0x20];
-	float manar_20;
+	float noo_20;
 
 }
 
@@ -165,7 +165,7 @@ struct darksys0x
 class Hamad {
 	char* padding[2];
 	bool Hamad_8;
-	manar* element_c;
+	noo* element_c;
 	darksys0x* Hamad_10;
 	int Hamad_14;
 
@@ -212,8 +212,8 @@ void Hamad::fun1(int arg1){
 					//loc_64E141
 					int var1 =2; 
 					sub_648100(&var1, &arg1);
-					manar* happy = element_c;// mov     eax, [esi+0Ch]
-					float aa = happy->manar_20;	// fld     dword ptr [eax+20h]
+					noo* happy = element_c;// mov     eax, [esi+0Ch]
+					float aa = happy->noo_20;	// fld     dword ptr [eax+20h]
 					darksys0x* bb = this->Hamad_10;//push last arrg;
 					int dd = arg1;
 					int kk = bb->darksys0x_0; 
