@@ -51,27 +51,54 @@
 
 
 
-class Hamad_9{
-	int ali_0
-	int padding[0xEC];
-	int member_f0;
+struct Love
+{
+	int love_1;
+	char padding[12];
 
-	void fun1(int arg1, int arg2);
+};
+
+class Hamad {
+	Love arr[15];
+	int member_0xf0;
 }
 
-void Hamad::fun1(int arg1, int arg2){
-	int the_esi = arg2;   //mov     esi, [esp+outText]
-	*(char*) the_esi = 0;
-	int the_eax = this->member_f0; //mov     eax, [ecx+0F0h]
-	the_eax = 0; //test    eax, eax
-	if(the_eax == 0){
-		return -1;
-
-	}else{
-		//loc_6F2D49
-		int the_edi = arg1; //mov     edi, [esp+4+carGenId]
-		the_eax = 0;  //xor     eax, eax
-		int the_edx = this-
+void fun1(int arg1, char* arg2) {
+	int element = arg2;
+	*(char*)element = 0;
+	int eax_r = this->member_0xf0;
+	if (eax_r == 0) {
+		return 0;
 	}
+	else {
+		int edi_r = arg1;
+		eax_r = 0;
+		int edx_r = this->arr[eax_r].love_1;
+		for (int i = 0; i < 15; i++) {
+			if (arr[i].love_1 == edi_r) {
+				//loc_6F2D67
+				char* p = this->arr[i].padding;  //lea     ecx, [edx+ecx+4]
+
+				int j = 0;
+				while (true) {
+
+					arg2[j] = p[j];
+
+					if (p[j] != '\0') {
+						j++
+					}
+					else {
+						break;
+					}
+
+
+				}
+				return i;
+			}
+		}
+
+
+	}
+
 
 }
